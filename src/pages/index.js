@@ -1,3 +1,4 @@
+import BigBoy from "@/components/BigBoy";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import PhoneInfo from "@/components/PhoneInfo";
@@ -11,6 +12,17 @@ export default function Home() {
     main: "bg-[#F9F9F9] h-full w-screen overflow-x-hidden text-black px-10 py-5 flex flex-col items-center",
   }
 
+  const systum = [
+    {
+      name: "RAVN",
+      image: "bigWatch"
+    },
+    {
+      name: "OBSIDIAN",
+      image: "bigPhone"
+    },
+  ]
+
   return (
     <main className={styles.main}>
       <Header />
@@ -19,6 +31,9 @@ export default function Home() {
       <Tagline />
       <Products />
       <Pricing />
+      {systum.map((urmom, id) => (
+        <BigBoy name={urmom.name} image={urmom.image} key={id} />
+      ))}
     </main>
   )
 }

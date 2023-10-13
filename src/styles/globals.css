@@ -45,3 +45,11 @@ h2 {
 p {
   font-family: "GilroyRegular";
 }
+
+.bg-bigWatch {
+  background-image: url("../assets/BigWatchImage.svg");
+}
+
+.bg-bigPhone {
+  background-image: url("../assets/BigPhoneImage.svg");
+}

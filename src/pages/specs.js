@@ -1,12 +1,15 @@
 import Header from '@/components/Header'
 import SpecsCard from '@/components/SpecsCard'
-import React from 'react'
+import React, { useState } from 'react'
 import PhoneSpecsImage from "../assets/PhoneSpecsImage.svg"
+import Navbar from '@/components/Navbar'
 
 function specs() {
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
     const styles = {
-        main: "bg-white h-full w-screen overflow-x-hidden text-black px-10 py-5 pb-0 flex flex-col items-center",
+        main: `${isMenuOpen ? "overflow-y-hidden" : ""} bg-white h-full w-screen overflow-x-hidden text-black px-10 py-5 pb-0 flex flex-col items-center`,
     }
 
     const imded = [
@@ -26,7 +29,8 @@ function specs() {
 
     return (
         <div className={styles.main}>
-            <Header />
+            <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             {
                 imded.map((urmom, id) => (
                     <SpecsCard name={urmom.name} feature1={urmom.feature1} feature2={urmom.feature2} image={urmom.image} key={id} />

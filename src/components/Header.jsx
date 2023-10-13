@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-function Header() {
+function Header({ isMenuOpen, setIsMenuOpen }) {
 
     const styles = {
         main: "w-full flex flex-row items-center justify-between overflow-hidden",
@@ -16,7 +16,7 @@ function Header() {
 
     return (
         <div className={styles.main}>
-            <div className={styles.iconDiv}>
+            <div className={styles.iconDiv} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <AiOutlineMenu className={styles.icon} />
             </div>
             <Link href="/">

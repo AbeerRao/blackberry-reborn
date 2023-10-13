@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import PhoneInfo from "@/components/PhoneInfo";
+import Pricing from "@/components/Pricing";
 import Products from "@/components/Products";
 import Tagline from "@/components/Tagline";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <PhoneInfo />
       <Tagline />
       <Products />
+      <Pricing />
     </main>
   )
 }

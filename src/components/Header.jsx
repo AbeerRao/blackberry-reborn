@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Logo from "../assets/Logo.svg"
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 function Header() {
@@ -18,13 +19,17 @@ function Header() {
             <div className={styles.iconDiv}>
                 <AiOutlineMenu className={styles.icon} />
             </div>
-            <div className={styles.logoDiv}>
-                <Image src={Logo} className="h-9 w-9" />
-                <h1>BlackBerry</h1>
-            </div>
-            <div className={styles.contactDiv}>
-                <h2>Contact</h2>
-            </div>
+            <Link href="/">
+                <div className={styles.logoDiv}>
+                    <Image src={Logo} className="h-9 w-9" />
+                    <h1>BlackBerry</h1>
+                </div>
+            </Link>
+            <Link href="/contact">
+                <div className={styles.contactDiv}>
+                    <h2>Contact</h2>
+                </div>
+            </Link>
         </div>
     )
 }

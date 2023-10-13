@@ -21,7 +21,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: black;
+  background-color: #F9F9F9;
   color: white;
 }
 
@@ -62,4 +62,8 @@ p {
   background-repeat: no-repeat;
   height: 1071px;
   width: 1868px;
+}
+
+.genericButton {
+  @apply rounded-3xl px-10 py-3 border-2 border-black cursor-pointer transition transform duration-200;
 }

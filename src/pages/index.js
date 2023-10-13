@@ -1,3 +1,4 @@
+import AppleCopy from "@/components/AppleCopy";
 import BigBoy from "@/components/BigBoy";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
@@ -34,6 +35,7 @@ export default function Home() {
       {systum.map((urmom, id) => (
         <BigBoy name={urmom.name} image={urmom.image} key={id} />
       ))}
+      <AppleCopy />
     </main>
   )
 }

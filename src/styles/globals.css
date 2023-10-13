@@ -48,8 +48,18 @@ p {
 
 .bg-bigWatch {
   background-image: url("../assets/BigWatchImage.svg");
+  object-fit: "contain"
 }
 
 .bg-bigPhone {
   background-image: url("../assets/BigPhoneImage.svg");
+  object-fit: "contain"
+}
+
+.bg-appleCopy {
+  background-image: url("../assets/AppleCopyImage.svg");
+  object-fit: "contain";
+  background-repeat: no-repeat;
+  height: 1071px;
+  width: 1868px;
 }

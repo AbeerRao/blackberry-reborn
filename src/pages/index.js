@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import PhoneInfo from "@/components/PhoneInfo";
+import Products from "@/components/Products";
 import Tagline from "@/components/Tagline";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Landing />
       <PhoneInfo />
       <Tagline />
+      <Products />
     </main>
   )
 }

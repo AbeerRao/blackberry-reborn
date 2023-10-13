@@ -67,3 +67,10 @@ p {
 .genericButton {
   @apply rounded-3xl px-10 py-3 border-2 border-black cursor-pointer transition transform duration-200;
 }
+
+.bg-phoneSpecs {
+  background-image: url("../assets/PhoneSpecsImage.svg");
+  object-fit: "contain";
+  background-repeat: no-repeat;
+  object-position: left;
+}

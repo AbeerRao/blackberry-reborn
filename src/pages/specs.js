@@ -17,13 +17,11 @@ function Specs() {
             name: "OBSIDIAN",
             feature1: <p className="text-xl">48MP<br />Front<br />Camera</p>,
             feature2: "5G",
-            image: PhoneSpecsImage
         },
         {
             name: "RAVN",
             feature1: <p className="text-xl">20IN<br />Screen</p>,
             feature2: "5G",
-            image: PhoneSpecsImage
         }
     ]
 

@@ -25,7 +25,7 @@ function Products() {
     }
 
     const styles = {
-        main: "flex flex-row w-full items-center justify-between mt-20",
+        main: "flex flex-row w-full items-center justify-between 2xl:mt-20 mt-40",
         itemDiv: "w-max flex flex-col items-start justify-center space-y-2 reveal fade-left",
         text: "text-4xl tracking-wider"
     }

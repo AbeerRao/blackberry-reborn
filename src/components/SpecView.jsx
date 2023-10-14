@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function SpecView() {
@@ -11,7 +12,9 @@ function SpecView() {
     return (
         <div className={styles.main}>
             <h2 className={styles.heading}>View Specs</h2>
-            <p className={styles.moreButton}>More</p>
+            <Link href="/specs">
+                <p className={styles.moreButton}>More</p>
+            </Link>
         </div>
     )
 }

@@ -98,3 +98,12 @@ p {
     opacity: 1;
   }
 }
+
+.bg-systum {
+  background-image: url("../assets/PhoneSpecsImage.svg");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  object-position: center;
+  background-position: center;
+  background-size: 900px;
+}

@@ -6,7 +6,7 @@ function SpecsCard({ name, image, feature1, feature2 }) {
 
     const styles = {
         main: "relative flex flex-col items-center justify-between p-10 w-full h-screen bg-[#F9F9F9] rounded-[3rem] mt-20",
-        image: "h-[1000px] absolute",
+        image: "h-[1000px] absolute reveal",
         myDiv: "flex flex-row items-center justify-between w-full h-max"
     }
 

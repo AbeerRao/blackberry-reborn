@@ -7,12 +7,31 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 
 function PhoneInfo() {
 
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", reveal);
+        reveal();
+    }
+
     const styles = {
         main: "flex flex-row items-center justify-center w-full space-x-5",
-        leftDiv: "flex flex-col items-center justify-center w-1/3 h-full space-y-5",
+        leftDiv: "flex flex-col items-center justify-center w-1/3 h-full space-y-5 reveal",
         textDiv: "flex flex-row items-center justify-center w-full h-56 bg-[#EFEFEF] rounded-2xl",
         text: "text-xl text-[#8729FF] px-5 py-3 rounded-full border-[1px] border-black",
-        imageDiv: "relative",
+        imageDiv: "relative reveal",
         icon1: "absolute top-1/2 -left-4 text-6xl cursor-pointer bg-black text-white rounded-full p-3",
         icon2: "absolute top-1/2 -right-4 text-6xl cursor-pointer bg-black text-white rounded-full p-3"
     }

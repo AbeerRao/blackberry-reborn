@@ -4,9 +4,28 @@ import TaglineImage from "../assets/TaglineImage.svg"
 
 function Tagline() {
 
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", reveal);
+        reveal();
+    }
+
     const styles = {
         main: "mt-20 h-[111vh]",
-        image: "w-[70vw]",
+        image: "w-[70vw] reveal",
         textDiv: "absolute",
         heading: "absolute text-9xl font-bold tracking-wide -bottom-48 left-32",
         desc: "absolute w-[30vw] left-[25vw] top-48"

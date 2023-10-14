@@ -17,7 +17,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
         main: `${isMenuOpen ? "flex flex-row" : "hidden"} w-screen h-screen bg-black z-50 items-center justify-between fixed top-0 pl-40 py-20`,
         heading: "md:text-[200px] -rotate-90 text-4xl",
         container: "flex flex-col space-y-10 items-start justify-center h-screen md:w-1/2 w-full",
-        textContainer: "flex flex-row items-center space-x-10 cursor-pointer text-gray-700 hover:text-white transition transform duration-200 ease-in-out group",
+        textContainer: "flex flex-row items-center space-x-10 cursor-pointer text-gray-700 hover:text-white transition transform duration-200 ease-in-out group reveal fade-left",
         srNo: "md:text-6xl text-3xl",
         menuItem: "md:text-9xl text-5xl",
         arrow: "hidden group-hover:block text-9xl",

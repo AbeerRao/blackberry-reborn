@@ -5,9 +5,28 @@ import WatchImage1 from "../assets/WatchImage1.svg"
 
 function Products() {
 
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", reveal);
+        reveal();
+    }
+
     const styles = {
         main: "flex flex-row w-full items-center justify-between mt-20",
-        itemDiv: "w-max flex flex-col items-start justify-center space-y-2",
+        itemDiv: "w-max flex flex-col items-start justify-center space-y-2 reveal fade-left",
         text: "text-4xl tracking-wider"
     }
 

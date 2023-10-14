@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import PhoneSpecsImage from "../assets/PhoneSpecsImage.svg"
 import Navbar from '@/components/Navbar'
 
-function specs() {
+function Specs() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -40,4 +40,4 @@ function specs() {
     )
 }
 
-export default specs
+export default Specs
